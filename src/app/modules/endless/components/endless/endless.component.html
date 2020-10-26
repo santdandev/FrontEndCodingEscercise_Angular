@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="logo">
+        <div class="logo-item"><img src="../../../../../assets/logo/logo.png"></div>
+    </div>
+    <div class="display-container">
+        <div class="image-container">
+            <div class="bg-note">
+                <h4 class="regular">New Games & Accessories</h4>
+                <h2>Monthly packages.<br>Excitement delivered daily.</h2>
+                <h5 class="by-txt">What’s the best way to shop for the latest video games and peripherals? How about never shopping at all? You’ll get new stuff on your doorstep — every month.</h5>
+                <button class="btn">GET STARTED</button>
+            </div>
+        </div>
+        
+        <div class="wrapper">
+            <h1 class="how-it">How it Works</h1>
+            <div class="group">
+                <div *ngFor="let step of howItWorks" class="group-item">
+                    <div class="number">{{step.number}}</div>
+                    <div class="title">{{step.title}}</div>
+                    <div class="body-txt">{{step.body}}</div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>

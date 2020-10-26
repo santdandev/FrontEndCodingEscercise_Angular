@@ -1,0 +1,208 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    width:77%;
+    margin: 0 auto;
+    box-shadow: 0 4px 2px 356px #101010;
+    position: relative;
+    .logo{
+        background-color: #222222;
+        padding: 7px 0;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        width: 77%;
+        top: 0;
+        z-index: 9;
+        .logo-item{
+            width: 70%;
+            position: relative;
+            left: 15%;
+            img{
+                height: auto;
+                width: 99px;
+            }
+        }
+    }
+    .display-container{
+        display: flex;
+        flex-direction: column;
+        margin-top: 33px;
+        position: relative;
+        .image-container {
+            margin: 0;
+            padding: 0;
+            background-image: url(../../../../../assets/images/photo-couch_2x.jpg);
+            min-height:854px;
+            position: relative;
+            background-attachment: fixed;
+            background-position:center;
+            background-repeat: no-repeat;
+            background-size:cover;
+        }
+        .bg-note{
+            position: absolute;
+            bottom: 50px;
+            left: 15%;
+            width: 43%;
+            h2,.by-txt{
+                color: #fff;
+                text-shadow: 0px 0px 1px #fff;
+            }
+            h4{
+                font-size: 1.5vw;
+                font-weight: normal;
+                margin: 10px 0;
+                color: #fff;
+            }
+            h2{
+                font-size: 2.7vw;
+                margin: 0px 0 10px;
+            }
+            .by-txt{
+                font-size:15px;
+                font-family: LatoLight;
+                line-height: 1.4;
+                font-weight: inherit;
+            }
+            .btn{
+                background-color: #51e3c2;
+                border-radius: 50px;
+                padding:8px 28px;
+                font-size: 15px;
+                text-transform: uppercase;
+                color: #2f3237;
+                border: 0;
+                letter-spacing:0.4px;
+                transition: all 1s;
+                cursor: pointer;
+                &:hover{
+                    background-color: #00aaaa;
+                }
+                &:focus{
+                    outline: 0;
+                }
+            }
+        }
+        .wrapper{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            color: #2f3237;
+            background: #fff;
+            padding: 0 0 60px;
+            background-image: radial-gradient(#f1f1f1, #f2f2f2);
+            h1{
+                font-size: 30px;
+                margin: 32px 0 0;
+                font-family: LatoLight;
+                letter-spacing: 1.5px;
+                opacity: 0.8;
+            }
+            .group {
+                flex-direction: row;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                width: 70%;
+                .group-item{
+                    flex: 0 0 11vw;
+                    padding: 18px 10px 10px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    min-height: 200px;
+                    justify-content: flex-start;
+                    &:first-child {
+                        padding-left: 0 !important;
+                    }
+                    &:last-child {
+                        padding-right: 0 !important;
+                    }
+                    .number{
+                        font-size:60px;
+                        &:after {
+                            content: "";
+                            width: 100%;
+                            height: 4px;
+                            background: #51e3c2;
+                            display: flex;
+                            margin-top: 8px;
+                            opacity: 0.6;
+                        }
+                    }
+                    .title{
+                        margin: 12px 0 12px 0;
+                        font-size:16px;
+                        font-weight: bold;
+                        text-transform: uppercase;
+                        text-align: center;
+                        white-space: nowrap;
+                    }
+                    .body-txt{
+                        text-align: center;
+                        line-height: 150%;
+                        font-size:75%;
+                        font-weight: 600;
+                    }
+                }
+            }
+            
+        }
+    }
+}
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .container{
+        width: 100%;
+        .logo{
+            padding: 7px 0;
+            width: 100%;
+            .logo-item{
+                width: 94%;
+                left: 3%;
+            }
+        }
+        .display-container{
+            flex-direction: column;
+            .image-container {
+                min-height: 400px;
+                background-image: url(../../../../../assets/images/photo-couch.jpg);
+            }
+            .bg-note{
+                left: 3%;
+                width: 96%;
+                bottom: 50px;
+                h4{
+                    font-size: 15px;
+                    margin: 0;
+                }
+                h2{
+                    font-size: 17px;
+                    margin: 10px 0;
+                }
+                .by-txt{
+                    font-size: 14px !important; 
+                    margin: 0 0 20px;
+                }
+                .btn{
+                    padding: 5px 15px;
+                    font-size: 12px;
+                }
+            }
+            .wrapper{
+                flex-direction: column;
+                .group {
+                    flex-direction: column;
+                    .group-item{
+                        flex: auto;
+                    }
+                }
+                
+            }
+        }
+    }
+  }
